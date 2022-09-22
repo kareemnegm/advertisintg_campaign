@@ -24,7 +24,7 @@ class CampaignController extends Controller
      */
     public function index(Request $request)
     {
-        return $this->CampaignRepository->getCampaigns($request);
+        return $this->paginateCollection(CampaignResource::collection($this->CampaignRepository->getCampaigns()), $request->limit, 'campaign');
     }
 
 

@@ -29,7 +29,7 @@ class CampaignFormRequest extends BaseFormRequest
             'to' => 'required|date_format:Y-m-d|after:from',
             'total' => 'required|numeric',
             'daily_budget' => 'required|numeric',
-            'campaign_images.*' => 'required|mimes:jpeg,png,jpg,gif|max:2048'
+            'campaign_images.*' => 'required|mimes:jpeg,png,jpg,pdf,gif|max:2048'
 
         ];
     }

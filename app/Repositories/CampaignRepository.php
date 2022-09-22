@@ -62,11 +62,10 @@ class CampaignRepository implements CampaignInterface
      * @return void
      */
 
-    public function getCampaigns($pagination)
+    public function getCampaigns()
     {
-        $limit = $pagination->limit ? $pagination->limit : 10;
         $date = date('d/m/Y');
-        return CampaignResource::collection(Campaign::where('to', '>=', $date)->paginate($limit));
+        return Campaign::where('to', '>=', $date)->get();
     }
 
 

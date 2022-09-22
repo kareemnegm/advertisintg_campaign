@@ -14,5 +14,5 @@ interface CampaignInterface
     public function updateCampaign($data,$id);
     public function showCampaign($id);
     public function deleteCampaign($id);
-    public function getCampaigns($pagination);
+    public function getCampaigns();
 }
